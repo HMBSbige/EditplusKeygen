@@ -9,4 +9,5 @@ private:
 public:
 	CRC16();
 	uint16_t GetCRC16(string ascii);
+	uint16_t GetCRC16(wstring ascii);
 };

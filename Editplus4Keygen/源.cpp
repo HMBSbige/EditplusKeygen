@@ -5,14 +5,17 @@ using namespace std;
 
 int main()
 {
-	Editplus4Keygen Key;
 	setlocale(LC_ALL, "");
+	ios::sync_with_stdio(false);
+	Editplus4Keygen Key;
 	wstring usr;
 	W2CHAR c;
 	cout << "Username:";
 	while (getline(wcin, usr, L'\n')) { 
-		wstring key = Key.getKey(usr);
-		wcout <<"Regcode:"<<key<< endl;
+
+		wcout <<"Editplus 4.x Regcode: " << endl << Key.get4Key(usr) << endl << endl;
+		wcout << "Editplus 3.x Regcode: " << endl << Key.get3Key(usr) << endl;
+	
 		string s = c.WstringToString(usr);
 		if (usr != c.StringToWstring(s))
 			cout << "The Regcode may be wrong!" << endl;

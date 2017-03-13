@@ -31,3 +31,16 @@ uint16_t CRC16::GetCRC16(string ascii)
 	}
 	return res;
 }
+uint16_t CRC16::GetCRC16(wstring ascii)
+{
+	uint16_t res = 0;
+	uint8_t tmp;
+	for (size_t i = 0; i < ascii.size(); ++i)
+	{
+		tmp = res & 0xFF;
+		res >>= 8;
+		tmp ^= ascii[i];
+		res ^= table[tmp];
+	}
+	return res;
+}

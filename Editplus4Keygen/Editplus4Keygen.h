@@ -12,6 +12,9 @@ private:
 	wstring regcodeinit();
 public:
 	Editplus4Keygen();
-	wstring getKey(wstring usr);
-	bool CheckKey(wstring, wstring);
+	wstring get4Key(wstring usr);
+	wstring get3Key(wstring usr);
+	int CheckKey(wstring, wstring);
+	bool Check4Key(wstring, wstring);
+	bool Check3Key(wstring, wstring);
 };
